@@ -1,1 +1,36 @@
+Q1. Brute Force approach kya hai?
+Har possible buying day i aur uske baad ke selling day j ko check karke maximum profit find karna.
 
+Q2. Time Complexity kya hai?
+O(n²) — because two nested loops use kiye hain.
+
+Q3. Buy aur sell same day kyun nahi kar sakte?
+Question me different day bola hai, aur sell hamesha buying day ke future me hona chahiye. Isliye:
+
+j = i + 1;
+
+Q4. O(n) me kaise optimize karoge? ⭐
+Array ko ek baar traverse karenge aur:
+
+Ab tak ka minimum buying price maintain karenge.
+Current price par profit calculate karenge.
+Maximum profit update karenge.
+
+Formula:
+
+profit = currentPrice - minPrice
+
+Isse:
+
+Time  = O(n)
+Space = O(1)
+
+Q5. Agar profit possible nahi ho to kya return karenge?
+0.
+
+Example:
+
+prices = [7, 6, 4, 3, 1]
+
+Koi profitable transaction nahi hai, therefore:
+output = 0
