@@ -23,3 +23,7 @@ public:
 
 // Time  = O(m+n) ✅
 // Space = O(1)    ✅
+// Problem: Merge Sorted Array
+// Pattern: Array / Two Pointers
+// Approach: Dono sorted arrays ko end se merge karo. i → nums1 ke actual elements, j → nums2, k → final position.
+// Key Logic: Dono ke current elements compare karo aur larger element ko nums1[k] par place karo.
