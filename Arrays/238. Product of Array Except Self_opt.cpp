@@ -4,20 +4,20 @@ public:
         int n = nums.size();
         vector<int> ans(n,1);
         
-        // prefix product
-        int prefix = 1;
+        // prefix product => ans
+        
 
-        for (int i = 0; i< n;i++){
-            ans[i] = prefix;
-            prefix *= nums[i];
+        for (int i = 1; i< n;i++){
+            ans[i] = ans[i-1] * nums[i-1];
+           
         }
 
         // suffix product 
         int suffix = 1;
 
-        for (int i = n-1; i>=0; i--){
+        for (int i = n-2; i>=0; i--){
+            suffix *= nums[i+1]; // ith suffix
             ans[i] *= suffix;
-            suffix *= nums[i];
         }
         return ans;
      
