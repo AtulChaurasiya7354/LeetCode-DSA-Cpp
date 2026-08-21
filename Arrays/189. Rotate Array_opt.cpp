@@ -3,16 +3,12 @@ public:
     void rotate(vector<int>& nums, int k) {
 
         int n = nums.size();
-        k = k % n;
+        vector<int> temp(n);
 
-        // Reverse complete array
-        reverse(nums.begin(), nums.end());
-
-        // Reverse first k elements
-        reverse(nums.begin(), nums.begin() + k);
-
-        // Reverse remaining elements
-        reverse(nums.begin() + k, nums.end());
+        for (int i=0;i<n;i++){
+            temp[(i+k)%n] = nums[i];
+    }
+        nums = temp;
     }
 };
 
