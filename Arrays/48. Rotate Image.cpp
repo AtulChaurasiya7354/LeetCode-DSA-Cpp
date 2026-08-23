@@ -29,3 +29,10 @@ public:
 // Technique: Transpose + Reverse Rows
 // In-place: Yes ✅
 // Rotation: 90° Clockwise
+
+
+90° Clockwise → Transpose + Reverse Rows
+90° Anti-clockwise → Transpose + Reverse Columns
+180° → Reverse Rows + Reverse Each Row
+
+LeetCode: 48. Rotate Image — isi problem se 90° clockwise/anti-clockwise rotation ka concept practice kar sakte ho.
